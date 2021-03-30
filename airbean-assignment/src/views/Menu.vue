@@ -1,12 +1,16 @@
 <template>
   <div>
       <p>Menu</p>
+      <p></p>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'Menu'
+    name: 'Menu',
+    mounted() {
+      return this.$store.dispatch('getMenuItems');
+    }
 }
 </script>
 
