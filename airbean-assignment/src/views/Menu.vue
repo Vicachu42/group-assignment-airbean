@@ -7,10 +7,7 @@
 
 <script>
 export default {
-    name: 'Menu',
-    mounted() {
-      return this.$store.dispatch('getMenuItems');
-    }
+    name: 'Menu'
 }
 </script>
 

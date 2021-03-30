@@ -7,6 +7,9 @@
 <script>
 export default {
   name: 'App',
+  mounted() {
+    return this.$store.dispatch('getMenuItems');
+  }
 }
 </script>
 
