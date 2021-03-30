@@ -12,7 +12,7 @@ export default {
     created(){
       setTimeout(() => {
         this.$router.push("/menu");
-      }, 5000);
+      }, 55000);
     },
 }
 </script>
@@ -30,6 +30,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  position: relative;
   
 }
 .intro-graphic-left{
@@ -40,7 +41,9 @@ margin-left: auto;
 }
 .airbean-landing {
   position: absolute;
-  
+  top:50%;
+  bottom:50%;
+  margin-right: auto;
  
  
  
