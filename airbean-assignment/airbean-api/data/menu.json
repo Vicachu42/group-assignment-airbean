@@ -1,6 +1,9 @@
 {
     "menu":[
-      {"id":1,"title":"Bryggkaffe","desc":"Bryggd på månadens bönor.","price":39},
+      {"id":1,
+        "title":"Bryggkaffe",
+        "desc":"Bryggd på månadens bönor.",
+        "price":39},
       {
         "id":2,
         "title":"Caffè Doppio",
@@ -20,6 +23,9 @@
         "desc":"Bryggd på månadens bönor.",
         "price":54
       },
-      {"id":6,"title":"Cortado","desc":"Bryggd på månadens bönor.","price":39}
+      {"id":6,
+        "title":"Cortado",
+        "desc":"Bryggd på månadens bönor.",
+        "price":39}
     ]
   }
