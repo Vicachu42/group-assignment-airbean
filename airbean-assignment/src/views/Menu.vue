@@ -6,9 +6,8 @@
     <navbox class="nav"  v-if="test" v-on:toggleBack="toggle" > </navbox>
     <navbutton v-on:click.native="toggle" v-else > </navbutton>
 
-    <navbox class="nav" v-if="test" > </navbox>
-    <navbutton v-on:click.native="toggle" v-if="test2"> </navbutton>
-    <article v-if="test" v-on:click="toggleback" class="othernavbutton">X</article>
+  
+
     <article class="basket-button">
       <img class="basket" src="../assets/graphics/bag.svg" alt="">
       <div class="item-counter">0</div>
