@@ -9,8 +9,9 @@ export default {
 </script>
 
 <style scoped>
+
 .navbutton {
-  position: absolute;
+position: absolute;
 left: 4.27%;
 right: 82.93%;
 top: 1.91%;
@@ -22,5 +23,9 @@ border-radius: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+}
+
+.navbutton:hover {
+  cursor: pointer;
 }
 </style>
