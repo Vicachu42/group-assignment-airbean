@@ -8,6 +8,7 @@ const url = 'http://localhost:3000/api/beans';
 export default new Vuex.Store({
     state: {
         coffelistitems:[],
+        cart:[],
     },
     mutations:{
         //update coffeeListItems 
