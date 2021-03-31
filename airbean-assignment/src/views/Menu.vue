@@ -6,9 +6,10 @@
     <navbox class="nav"  v-if="test"  > </navbox>
     <navbutton v-on:click.native="toggle" v-else > </navbutton>
 
+        <cart />
   
 
-    <article class="basket-button" v-if="toggler" >
+    <article class="basket-button" v-on:click="toggleCart" v-if="toggler" >
       <img class="basket" src="../assets/graphics/bag.svg"  alt="">
       <div class="item-counter">{{counter}}</div>
     </article>
@@ -25,6 +26,7 @@
 import  coffeitems from "../components/MenuItem";
 import navbox from "../components/Nav";
 import navbutton from "../components/navbutton";
+import Cart from "../components/Cart"
 
 export default {
     name: 'Menu',
@@ -33,6 +35,7 @@ export default {
       coffeitems,
       navbox,
       navbutton,
+      Cart
        
     },
     
@@ -58,6 +61,9 @@ export default {
     methods:{
       toggle(){
          this.$store.commit("toggle");
+      },
+      toggleCart(){
+         this.$store.commit("showCart");
       },
      
     },
@@ -105,6 +111,10 @@ export default {
   right: 4.27%;
   top: 1.91%;
   bottom: 90.94%;
+}
+
+.basket-button:hover {
+  cursor: pointer;
 }
 
 .basket {

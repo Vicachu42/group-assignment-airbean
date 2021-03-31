@@ -24,6 +24,10 @@ export default new Vuex.Store({
         toggle(state){
             state.test = !state.test;
             state.toggler = !state.toggler;
+        },
+        showCart(state){
+            state.test = !state.test;
+            state.toggler = !state.toggler;
         }
         
     },
