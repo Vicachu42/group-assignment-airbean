@@ -10,11 +10,13 @@ export default new Vuex.Store({
         coffelistitems:[],
     },
     mutations:{
+        //update coffeeListItems 
         sendtostate(state,data){
             state.coffelistitems.push(data);
         }
     },
     actions: {
+        // fetch coffee data from web server. 
         async getMenuItems(ctx) {
             const response = await fetch(url, { method: 'GET'});
             const data = await response.json();

@@ -1,9 +1,13 @@
 <template>
   <div class="wrapper">
+
+    
+
     <img src="../assets/graphics/graphics-header.svg" alt="">
     <navbutton class="nav" v-if="test" > </navbutton>
     <article v-on:click="toggle"  class="navbutton"><img class="naviocon" src="../assets/graphics/navicon.svg" alt=""></article>
     <article v-if="test" v-on:click="toggleback" class="othernavbutton">X</article>
+
     <h1 class="title">Meny</h1>
   <coffeitems v-for="(items,index) in getCoffeeList" v-bind:key="index" v-bind:items="items"> </coffeitems>
   <img class="footer-img" src="../assets/graphics/graphics-footer.svg" alt="">
@@ -45,6 +49,7 @@ export default {
 </script>
 
 <style scoped>
+
 .title{
   font-size: 42px;
 }
@@ -55,6 +60,10 @@ export default {
   background:#F3E4E1;
   display: flex;
   flex-direction: column;
+
+  justify-content: space-evenly;
+  
+
   position: relative;
 
 }
@@ -91,5 +100,6 @@ bottom: 92.37%;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 </style>

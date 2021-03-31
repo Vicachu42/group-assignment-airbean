@@ -1,7 +1,16 @@
 <template>
 <div class="wrap">
 
-  <article class="holder"> <article class="button" v-on:click="send"><img src="../assets/graphics/add.svg" alt=""></article>  <article class="top"> <h2 class="sub-title">{{title}}</h2> <p>{{price}} Kr</p> </article>  <article class="bottom"><p>{{description}}</p> </article> </article>
+  <article class="holder"> 
+         <article class="button" v-on:click="send"> <img src="../assets/graphics/add.svg" alt=""> </article> 
+           <article class="top"> 
+              <h2 class="sub-title">{{title}}</h2> 
+              <p>{{price}} Kr</p>
+         </article> 
+              
+         <article class="bottom"> <p>{{description}}</p> </article>
+               
+         </article>
 </div>
   
   
@@ -26,7 +35,7 @@ computed:{
 },
 methods:{
     send(){
-        console.log(this.items);
+        console.log(this.items.id);
     }
 }
 }
@@ -34,10 +43,16 @@ methods:{
 
 <style>
 body {
+
     display:flex;
     align-items: center;
     justify-content: center;
 }
+
+.wrap{
+    padding: 20px;
+}
+
 .sub-title{
     font-size: 23px;
     margin:0;
