@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
      <navbutton v-on:click.native="getvalue"> </navbutton>
-     <navbox v-if="test"> </navbox>
+     <navbox class="nav" v-if="test"> </navbox>
     <img src="../assets/graphics/graphics-header.svg" alt="">
     <h1>Vårt kaffe</h1>
     <p>Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio, grounds dripper, crema, strong whipped, variety extra iced id lungo half and half mazagran. Pumpkin spice.</p>
@@ -58,5 +58,9 @@ export default {
   position: relative;
 }
 
+.nav {
+  position: absolute;
+  top:0;
+}
 
 </style>

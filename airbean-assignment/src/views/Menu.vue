@@ -25,6 +25,7 @@
 import  coffeitems from "../components/MenuItem";
 import navbox from "../components/Nav";
 import navbutton from "../components/navbutton";
+
 export default {
     name: 'Menu',
 
@@ -72,6 +73,7 @@ export default {
 }
 
 .wrapper {
+  
   width:375px;
   height: 839px;
   background:#F3E4E1;
@@ -91,21 +93,7 @@ export default {
   position: absolute;
   top:0;
 }
-.othernavbutton {
-position: absolute;
-left: 4.27%;
-right: 82.93%;
-top: 1.91%;
-bottom: 92.37%;
-width: 48px;
-height: 48px;
-background: white;
-border-radius: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
 
-}
 
 .basket-button {
   background-color: #2F2926;

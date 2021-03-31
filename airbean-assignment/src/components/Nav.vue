@@ -22,16 +22,20 @@ export default {
        this.$store.commit("toggle");
     },
     goToMenu: function(){
+       this.$store.commit("toggle");
       this.$router.push("/menu");
       
     },
     goToOurCoffee:function(){
+       this.$store.commit("toggle");
       this.$router.push("/about");
     },
     goToMyProfile:function(){
+       this.$store.commit("toggle");
       this.$router.push('/profile');
     },
     goToOrderstatus:function(){
+       this.$store.commit("toggle");
       this.$router.push('/status');
     },
   }
