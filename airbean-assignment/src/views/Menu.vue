@@ -5,7 +5,7 @@
 
     <img class="header-img" src="../assets/graphics/graphics-header.svg" alt="">
     <navbox class="nav" v-if="test" > </navbox>
-    <article v-on:click="toggle"  class="navbutton"><img class="naviocon" src="../assets/graphics/navicon.svg" alt=""></article>
+    <navbutton v-on:click.native="toggle" v-if="test2"> </navbutton>
     <article v-if="test" v-on:click="toggleback" class="othernavbutton">X</article>
 
     <h1 class="title">Meny</h1>
@@ -18,18 +18,20 @@
 
 import  coffeitems from "../components/MenuItem";
 import navbox from "../components/Nav";
-
+import navbutton from "../components/navbutton";
 export default {
     name: 'Menu',
 
     components:{
       coffeitems,
       navbox,
+      navbutton,
        
     },
     data:function(){
       return {
         test: false,
+        test2:true,
       }
     },
     computed:{
@@ -39,7 +41,8 @@ export default {
     },
     methods:{
       toggle(){
-        this.test = true;
+        this.test = !false;
+        console.log("hej")
       },
       toggleback(){
         this.test = false;
@@ -72,20 +75,7 @@ export default {
 .header-img {
   
 }
-.navbutton {
-  position: absolute;
-left: 4.27%;
-right: 82.93%;
-top: 1.91%;
-bottom: 92.37%;
-width: 48px;
-height: 48px;
-background: white;
-border-radius: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-}
+
 .nav {
   position: absolute;
   top:0;
