@@ -2,8 +2,18 @@
   <div class="wrapper">
     <img class="header-img" src="../assets/graphics/graphics-header.svg" alt="">
 
+
     <navbox class="nav"  v-if="test" v-on:toggleBack="toggle" > </navbox>
     <navbutton v-on:click.native="toggle" v-else > </navbutton>
+
+    <navbox class="nav" v-if="test" > </navbox>
+    <navbutton v-on:click.native="toggle" v-if="test2"> </navbutton>
+    <article v-if="test" v-on:click="toggleback" class="othernavbutton">X</article>
+    <article class="basket-button">
+      <img class="basket" src="../assets/graphics/bag.svg" alt="">
+      <div class="item-counter">0</div>
+    </article>
+
 
     <h1 class="title">Meny</h1>
   <coffeitems v-for="(items,index) in getCoffeeList" v-bind:key="index" v-bind:items="items"> </coffeitems>
@@ -87,5 +97,37 @@ display: flex;
 justify-content: center;
 align-items: center;
 
+}
+
+.basket-button {
+  background-color: #2F2926;
+  height: 48px;
+  width: 48px;
+  border-radius: 999rem;
+  position: absolute;
+  left: 82.93%;
+  right: 4.27%;
+  top: 1.91%;
+  bottom: 90.94%;
+}
+
+.basket {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+}
+
+.item-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E5674E;
+  color: white;
+  height: 22px;
+  width: 22px;
+  border-radius: 999rem;
+  position: absolute;
+  top: -15%;
+  right: -4%;
 }
 </style>
