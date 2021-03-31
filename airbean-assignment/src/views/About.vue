@@ -1,5 +1,7 @@
 <template>
   <div class="wrapper">
+     <navbutton v-on:click.native="getvalue"> </navbutton>
+     <navbox v-if="test"> </navbox>
     <img src="../assets/graphics/graphics-header.svg" alt="">
     <h1>Vårt kaffe</h1>
     <p>Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio, grounds dripper, crema, strong whipped, variety extra iced id lungo half and half mazagran. Pumpkin spice.</p>
@@ -13,8 +15,28 @@
 </template>
 
 <script>
+import navbutton from "../components/navbutton"; 
+import navbox from "../components/Nav";
+
 export default {
-    name: 'About'
+    components:{
+      navbutton,
+      navbox,
+      
+    },
+    name: 'About',
+    computed:{
+      test(){
+        return this.$store.state.test
+      }
+    },
+    methods:{
+      getvalue(){
+        console.log("hej");
+        this.$store.commit("toggle");
+
+      }
+    }
     // data() {
     //   return {
     //     infoTexts: [
@@ -23,10 +45,10 @@ export default {
     //     ]
     //   }
     // }
-}
+}    
 </script>
 
-<style>
+<style scoped>
 .wrapper {
   width:375px;
   background:#F3E4E1;
@@ -35,5 +57,6 @@ export default {
   justify-content: space-evenly;
   position: relative;
 }
+
 
 </style>

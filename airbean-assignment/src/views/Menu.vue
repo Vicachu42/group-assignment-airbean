@@ -3,7 +3,7 @@
     <img class="header-img" src="../assets/graphics/graphics-header.svg" alt="">
 
 
-    <navbox class="nav"  v-if="test" v-on:toggleBack="toggle" > </navbox>
+    <navbox class="nav"  v-if="test"  > </navbox>
     <navbutton v-on:click.native="toggle" v-else > </navbutton>
 
   
@@ -37,8 +37,7 @@ export default {
     
     data:function(){
       return {
-        test: false,
-        toggler:true,
+        
       }
     },
     computed:{
@@ -47,13 +46,17 @@ export default {
       },
       counter(){
          return this.$store.state.counter;
-       }
+       },
+        test(){
+        return this.$store.state.test
+      },
+      toggler(){
+        return this.$store.state.toggler;
+      }
     },
     methods:{
       toggle(){
-        this.test = !this.test;
-        this.toggler =!this.toggler;
-        console.log("hej")
+         this.$store.commit("toggle");
       },
      
     },

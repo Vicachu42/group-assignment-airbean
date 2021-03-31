@@ -19,7 +19,7 @@ export default {
 
   methods:{
     close: function (){
-      this.$emit("toggleBack")
+       this.$store.commit("toggle");
     },
     goToMenu: function(){
       this.$router.push("/menu");
