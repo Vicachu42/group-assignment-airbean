@@ -4,9 +4,9 @@
      <navbox class="nav" v-if="test"> </navbox>
     <img src="../assets/graphics/graphics-header.svg" alt="">
     
-    <img src="../assets/graphics/eva-cortado.jpg" alt="">
-    <h3>Eva Cortado</h3>
-    <p>VD och Grundare</p>
+    
+    <h3>your order on its way</h3>
+    <p> VD och Grundare </p>
    
   </div>
 </template>
