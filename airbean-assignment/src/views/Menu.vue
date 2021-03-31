@@ -1,12 +1,9 @@
 <template>
   <div class="wrapper">
-
-    
-
     <img class="header-img" src="../assets/graphics/graphics-header.svg" alt="">
-    <navbox class="nav" v-if="test" > </navbox>
-    <navbutton v-on:click.native="toggle" v-if="test2"> </navbutton>
-    <article v-if="test" v-on:click="toggleback" class="othernavbutton">X</article>
+
+    <navbox class="nav"  v-if="test" v-on:toggleBack="toggle" > </navbox>
+    <navbutton v-on:click.native="toggle" v-else > </navbutton>
 
     <h1 class="title">Meny</h1>
   <coffeitems v-for="(items,index) in getCoffeeList" v-bind:key="index" v-bind:items="items"> </coffeitems>
@@ -31,7 +28,6 @@ export default {
     data:function(){
       return {
         test: false,
-        test2:true,
       }
     },
     computed:{
@@ -41,13 +37,12 @@ export default {
     },
     methods:{
       toggle(){
-        this.test = !false;
+        this.test = !this.test;
         console.log("hej")
       },
-      toggleback(){
-        this.test = false;
-      }
-    }
+     
+    },
+
 }
 </script>
 
@@ -72,9 +67,7 @@ export default {
 .footer-img {
   margin-top: auto;
 }
-.header-img {
-  
-}
+
 
 .nav {
   position: absolute;
