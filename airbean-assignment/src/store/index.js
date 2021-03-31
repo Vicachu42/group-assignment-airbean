@@ -10,6 +10,8 @@ export default new Vuex.Store({
         coffelistitems:[],
         cart:[],
         counter:0,
+        test: false,
+        toggler:true,
     },
     mutations:{
         sendtostate(state,data){
@@ -19,6 +21,10 @@ export default new Vuex.Store({
             state.counter ++;
             state.cart.push(data);
         },
+        toggle(state){
+            state.test = !state.test;
+            state.toggler = !state.toggler;
+        }
         
     },
     actions: {
