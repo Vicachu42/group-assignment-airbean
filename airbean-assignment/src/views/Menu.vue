@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    
     <h1 class="title">Meny</h1>
   <coffeitems v-for="(items,index) in getCoffeeList" v-bind:key="index" v-bind:items="items"> </coffeitems>
   </div>
@@ -24,6 +25,7 @@ export default {
 </script>
 
 <style scoped>
+
 .title{
   font-size: 42px;
 }
@@ -34,5 +36,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  
 }
 </style>
