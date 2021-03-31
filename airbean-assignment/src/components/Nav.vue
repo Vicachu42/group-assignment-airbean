@@ -1,8 +1,8 @@
 <template>
 
-      <article class="holder">
+    <article class="holder">
        
-        </article>
+    </article>
  
 </template>
 
@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
 .holder {
-    width:375px;
+  width:375px;
   height: 667px;
   background:#2F2926;
 }

@@ -35,7 +35,7 @@ computed:{
 },
 methods:{
     send(){
-        console.log(this.items.id);
+        console.log(this.items);
     }
 }
 }
@@ -50,7 +50,7 @@ body {
 }
 
 .wrap{
-    padding: 20px;
+    padding: 5px;
 }
 
 .sub-title{
