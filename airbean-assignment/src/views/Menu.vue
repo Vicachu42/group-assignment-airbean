@@ -8,14 +8,14 @@
 
   
 
-    <article class="basket-button">
-      <img class="basket" src="../assets/graphics/bag.svg" alt="">
-      <div class="item-counter">0</div>
+    <article class="basket-button" v-if="toggler" >
+      <img class="basket" src="../assets/graphics/bag.svg"  alt="">
+      <div class="item-counter">{{counter}}</div>
     </article>
 
 
     <h1 class="title">Meny</h1>
-  <coffeitems v-for="(items,index) in getCoffeeList" v-bind:key="index" v-bind:items="items"> </coffeitems>
+  <coffeitems  v-for="(items,index) in getCoffeeList" v-bind:key="index" v-bind:items="items"> </coffeitems>
   <img class="footer-img" src="../assets/graphics/graphics-footer.svg" alt="">
   </div>
 </template>
@@ -34,19 +34,25 @@ export default {
       navbutton,
        
     },
+    
     data:function(){
       return {
         test: false,
+        toggler:true,
       }
     },
     computed:{
       getCoffeeList(){
         return this.$store.state.coffelistitems[0];
-      }
+      },
+      counter(){
+         return this.$store.state.counter;
+       }
     },
     methods:{
       toggle(){
         this.test = !this.test;
+        this.toggler =!this.toggler;
         console.log("hej")
       },
      

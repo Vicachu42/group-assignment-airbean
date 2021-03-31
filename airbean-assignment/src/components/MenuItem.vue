@@ -36,6 +36,8 @@ computed:{
 methods:{
     send(){
         console.log(this.items);
+        this.$store.commit("addCounter",this.items);
+      
     }
 }
 }

@@ -9,15 +9,19 @@ export default new Vuex.Store({
     state: {
         coffelistitems:[],
         cart:[],
+        counter:0,
     },
     mutations:{
-        //update coffeeListItems 
         sendtostate(state,data){
             state.coffelistitems.push(data);
-        }
+        },
+        addCounter(state,data){
+            state.counter ++;
+            state.cart.push(data);
+        },
+        
     },
     actions: {
-        // fetch coffee data from web server. 
         async getMenuItems(ctx) {
             const response = await fetch(url, { method: 'GET'});
             const data = await response.json();
