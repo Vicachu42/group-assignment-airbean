@@ -16,15 +16,26 @@ export default new Vuex.Store({
 
     },
     mutations:{
+        
 
         sendtostate(state,data){
             state.coffelistitems.push(data);
         },
+
         addCounter(state,data){
-            state.counter ++;
-           // addToCart(data)
-            state.cart.push(data);
+            
+            const itemInCart = state.cart.find(item => item.id === data.id);
+            if(itemInCart) {
+                alert("item in cart");
+            } else{
+                state.counter ++;
+                console.log("någontig");
+                 state.cart.push(data);
+            }
+           
         },
+
+       
         toggle(state){
             state.test = !state.test;
             state.toggler = !state.toggler;
