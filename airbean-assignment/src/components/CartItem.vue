@@ -4,7 +4,7 @@
               <h2 class="sub-title">{{title}}</h2> 
                     <aside> 
                     <img v-on:click="adder" src="../assets/graphics/arrow-up.svg" alt="">
-                    <small> {{counter.length}} </small>
+                    <small> {{count}} </small>
                     <img src="../assets/graphics/arrow-down.svg" alt=""> 
                     </aside>
          </article> 
@@ -23,8 +23,8 @@ props:{
 },
 
 computed:{
-     counter(){
-         return this.$store.state.itemsInCart;
+     count(){
+         return this.$store.getters.orderedItemsCount;
        },
     price(){
         return this.cartItem.price;
