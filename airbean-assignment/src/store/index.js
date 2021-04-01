@@ -13,6 +13,7 @@ export default new Vuex.Store({
         test: false,
         toggler:true,
         viewCart: false,
+        itemCounter:1,
 
     },
     mutations:{
@@ -23,14 +24,17 @@ export default new Vuex.Store({
         },
 
         addCounter(state,data){
-            
+            state.counter ++;
             const itemInCart = state.cart.find(item => item.id === data.id);
             if(itemInCart) {
                 alert("item in cart");
+                state.itemCounter ++;
             } else{
-                state.counter ++;
+             
                 console.log("någontig");
                  state.cart.push(data);
+                
+                 
             }
            
         },

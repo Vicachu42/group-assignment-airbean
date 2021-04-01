@@ -92,4 +92,7 @@ p {
     height: 11.19px;
     widows: 11.19px;
 }
+.button:hover {
+     cursor: pointer;
+}
 </style>

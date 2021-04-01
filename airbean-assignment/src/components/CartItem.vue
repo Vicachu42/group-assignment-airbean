@@ -24,7 +24,7 @@ props:{
 
 computed:{
      counter(){
-         return this.$store.state.counter;
+         return this.$store.state.itemCounter;
        },
     price(){
         return this.cartItem.price;
