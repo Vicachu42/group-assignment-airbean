@@ -9,11 +9,13 @@ export default new Vuex.Store({
     state: {
         coffelistitems:[],
         cart:[],
+        itemsInCart:[],
         counter:0,
         test: false,
         toggler:true,
         viewCart: false,
         itemCounter:1,
+        
 
     },
     mutations:{
@@ -27,12 +29,15 @@ export default new Vuex.Store({
             state.counter ++;
             const itemInCart = state.cart.find(item => item.id === data.id);
             if(itemInCart) {
-                alert("item in cart");
-                state.itemCounter ++;
+                console.log("item in cart");
+                state.itemsInCart.push(data);
+
+              
             } else{
              
                 console.log("någontig");
                  state.cart.push(data);
+           
                 
                  
             }
@@ -59,5 +64,8 @@ export default new Vuex.Store({
             console.log(newdata);
             ctx.commit("sendtostate",newdata);
         }
+    },
+    getters: {
+        
     }
 })
