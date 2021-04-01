@@ -6,7 +6,7 @@
     <navbox class="nav"  v-if="test"  > </navbox>
     <navbutton v-on:click.native="toggle" v-else > </navbutton>
 
-        <cart />
+        <cart v-if="viewCart" />
   
 
     <article class="basket-button" v-on:click="toggleCart" v-if="toggler" >
@@ -56,6 +56,9 @@ export default {
       },
       toggler(){
         return this.$store.state.toggler;
+      },
+      viewCart(){
+        return this.$store.state.viewCart
       }
     },
     methods:{

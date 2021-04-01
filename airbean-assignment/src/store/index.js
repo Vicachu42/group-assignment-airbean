@@ -12,13 +12,17 @@ export default new Vuex.Store({
         counter:0,
         test: false,
         toggler:true,
+        viewCart: false,
+
     },
     mutations:{
+
         sendtostate(state,data){
             state.coffelistitems.push(data);
         },
         addCounter(state,data){
             state.counter ++;
+           // addToCart(data)
             state.cart.push(data);
         },
         toggle(state){
@@ -26,8 +30,8 @@ export default new Vuex.Store({
             state.toggler = !state.toggler;
         },
         showCart(state){
-            state.test = !state.test;
-            state.toggler = !state.toggler;
+            state.viewCart = !state.viewCart;
+            
         }
         
     },
