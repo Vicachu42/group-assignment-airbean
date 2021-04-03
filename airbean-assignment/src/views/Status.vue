@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import navbutton from "../components/navbutton"; 
+import navbutton from "../components/navbutton";
 import navbox from "../components/Nav";
 
 export default {

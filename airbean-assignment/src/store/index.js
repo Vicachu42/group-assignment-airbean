@@ -9,7 +9,7 @@ export default new Vuex.Store({
     state: {
         coffelistitems:[],
         cart:[],
-        orderedItems: [],
+        orderedItems:[],
         counter:0,
         test: false,
         toggler:true,
@@ -26,13 +26,13 @@ export default new Vuex.Store({
             state.counter ++;
             
             const itemInCart = state.cart.find(item => item.id === data.id);
-          //  const itemInOrederedItems = state.orderedItems.find(item => item.id === data.id);
-            if(itemInCart) {
-                console.log("item in cart array and is pushed into oredered items array ");
+          //  const itemInOrderedItems = state.orderedItems.find(item => item.id === data.id);
+            if (itemInCart) {
+                console.log("item in cart array and is pushed into ordered items array");
                  state.orderedItems.push(data);
 
             } else {
-                console.log("items pushed into cart and orederedItems");
+                console.log("items pushed into cart and orderedItems");
                 state.cart.push(data);
                 state.orderedItems.push(data);
 
@@ -45,7 +45,6 @@ export default new Vuex.Store({
         },
         showCart(state){
             state.viewCart = !state.viewCart;
-            
         }
         
     },
