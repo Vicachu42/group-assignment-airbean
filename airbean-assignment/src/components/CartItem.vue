@@ -3,9 +3,9 @@
            <article class="top"> 
               <h2 class="sub-title">{{title}}</h2> 
                     <aside> 
-                    <img v-on:click="adder" src="../assets/graphics/arrow-up.svg" alt="">
+                    <img v-on:click="addOrder" src="../assets/graphics/arrow-up.svg" alt="">
                     <small> {{count}} </small>
-                    <img src="../assets/graphics/arrow-down.svg" alt=""> 
+                    <img v-on:click="reduceOrder"  src="../assets/graphics/arrow-down.svg" alt=""> 
                     </aside>
          </article> 
               
@@ -24,7 +24,7 @@ props:{
 
 computed:{
      count(){
-         return this.$store.getters.orderedItemsCount;
+        return this.cartItem.count;
        },
     price(){
         return this.cartItem.price;
@@ -38,8 +38,11 @@ computed:{
     
 },
 methods:{
-    adder(){
-        this.counter ++;
+    addOrder(){
+        this.$store.commit("addCounter",this.cartItem);
+    },
+    reduceOrder(){
+        this.$store.commit("delFromCart",this.cartItem);
     }
 }
 

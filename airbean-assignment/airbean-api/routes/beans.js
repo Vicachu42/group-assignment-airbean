@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
 
     setTimeout(() => {
         res.send(order);
-    }, 2000);
+    }, 500);
 });
 
 router.get('/key', (req, res) => {

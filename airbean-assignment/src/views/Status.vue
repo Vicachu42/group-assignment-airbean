@@ -1,12 +1,12 @@
 <template>
   <div class="wrapper">
      
-    <p class="order"> Ordernummer <strong></strong>  </p>
+    <p class="order"> Ordernummer: <strong> {{orderNumber}} </strong>  </p>
     <div class="drone">
       <img src="../assets/graphics/drone.svg" alt="">
     </div>
     <h1>Din beställning är på väg!</h1>
-    <p class="time"> <strong>13 </strong> minuter </p>
+      <p class="time"> {{eta}} minuter </p>
    
    <div v-on:click="backToMenu" class="btn">
       <p class="btn-text" > OK, Cool! </p>
@@ -24,12 +24,18 @@ export default {
     },
 
     computed:{
-      
+      eta(){
+       return this.$store.state.eta
+      },
+      orderNumber(){
+        return this.$store.state.orderNumber
+      }
     },
     methods:{
-      backToMenu: function(){
+       backToMenu: function(){
       this.$router.push("/menu");
-      
+       this.$store.commit("resetCart");
+     
     }
     }
 }
