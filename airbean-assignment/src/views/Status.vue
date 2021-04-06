@@ -1,55 +1,118 @@
 <template>
   <div class="wrapper">
-     <navbutton v-on:click.native="getvalue"> </navbutton>
-     <navbox class="nav" v-if="test"> </navbox>
-    <img src="../assets/graphics/graphics-header.svg" alt="">
-    
-    
-    <h3>your order on its way</h3>
-    <p> VD och Grundare </p>
+     
+    <p class="order"> Ordernummer <strong></strong>  </p>
+    <div class="drone">
+      <img src="../assets/graphics/drone.svg" alt="">
+    </div>
+    <h1>Din beställning är på väg!</h1>
+    <p class="time"> <strong>13 </strong> minuter </p>
    
+   <div v-on:click="backToMenu" class="btn">
+      <p class="btn-text" > OK, Cool! </p>
+   </div>
   </div>
 </template>
 
 <script>
-import navbutton from "../components/navbutton"; 
-import navbox from "../components/Nav";
+
 
 export default {
-    name: 'Profile',
+    name: 'Status',
      components:{
-      navbutton,
-      navbox,
+    
     },
 
     computed:{
-      test(){
-        return this.$store.state.test
-      }
+      
     },
     methods:{
-      getvalue(){
-        console.log("hej");
-        this.$store.commit("toggle");
-
-      }
+      backToMenu: function(){
+      this.$router.push("/menu");
+      
+    }
     }
 }
 
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+
+
+
 .wrapper {
-  width:375px;
-  background:#F3E4E1;
+  width: 375px;
+  height: 667px;
+  background: #E5674E;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   position: relative;
 }
 
-.nav {
-  position: absolute;
-  top:0;
+.order {
+font-family: 'Work Sans', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 120%;
+/* or 19px */
+
+color: rgba(255, 255, 255, 0.7);
+
 }
+.time{
+
+font-family: 'Work Sans', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+
+color: #FFFFFF;
+}
+.drone{
+  width: 216.29px;
+height: 119.06px;
+
+}
+
+h1 {
+
+font-family: 'PT Serif', serif;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+padding: 0 48px;
+color: #FFFFFF;
+
+}
+
+.btn {
+
+width: 184px;
+height: 55px;
+display: flex;
+justify-content: center;
+
+background: #FFFFFF;
+border-radius: 50px;
+
+}
+
+.btn-text{
+
+font-family: 'PT Serif', serif;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 55px;
+color: #2F2926;
+}
+.btn:hover{
+  cursor: pointer;
+}
+
 </style>
