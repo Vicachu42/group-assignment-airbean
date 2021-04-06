@@ -12,6 +12,7 @@
     
 
     <h1>your total: {{ total }}</h1>
+    <p> inkl moms + drönarleverans </p>
     <div v-on:click="postOrder" class="btn">
       <p class="btn-text" > Take my money!</p>
    </div>

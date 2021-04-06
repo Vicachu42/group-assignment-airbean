@@ -62,7 +62,7 @@ export default new Vuex.Store({
              
             }
 
-            let total = 0;
+            let total = 49;
             for (let item of state.cart) {
                 total += item.price * item.count;
 
@@ -98,7 +98,7 @@ export default new Vuex.Store({
                 
             }
 
-            let total = 0;
+            let total = 49;
             for (let item of state.cart) {
                 total += item.price * item.count;
 
