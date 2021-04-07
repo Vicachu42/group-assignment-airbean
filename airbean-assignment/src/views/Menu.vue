@@ -1,20 +1,13 @@
 <template>
   <div class="wrapper">
     <img class="header-img" src="../assets/graphics/graphics-header.svg" alt="">
-
-
     <navbox class="nav"  v-if="test"  > </navbox>
     <navbutton v-on:click.native="toggle" v-else > </navbutton>
-
         <cart v-if="viewCart" />
-  
-
     <article class="basket-button" v-on:click="toggleCart" v-if="toggler" >
       <img class="basket" src="../assets/graphics/bag.svg"  alt="">
       <div class="item-counter">{{counter}}</div>
     </article>
-
-
     <h1 class="title">Meny</h1>
   <coffeitems  v-for="(items,index) in getCoffeeList" v-bind:key="index" v-bind:items="items"> </coffeitems>
   <img class="footer-img" src="../assets/graphics/graphics-footer.svg" alt="">
@@ -77,8 +70,9 @@ export default {
 <style scoped>
 
 .title{
+  font-family: PT Serif;
   font-size: 42px;
-  margin:0;
+  margin-top: 20px;
 }
 
 .wrapper {
