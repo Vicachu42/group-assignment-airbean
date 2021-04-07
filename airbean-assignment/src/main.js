@@ -2,6 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store/index.js'
+import VueLowdb from 'vue-lowdb'
+ 
+Vue.use(VueLowdb)
 
 Vue.config.productionTip = false
 
