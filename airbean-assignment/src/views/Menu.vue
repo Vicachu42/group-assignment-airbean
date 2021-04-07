@@ -18,7 +18,7 @@
 
 import coffeitems from "../components/MenuItem";
 import navbox from "../components/Nav";
-import Navbutton from "../components/Navbutton";
+import navbutton from "../components/navbutton";
 import Cart from "../components/Cart"
 
 export default {
@@ -27,7 +27,7 @@ export default {
     components:{
       coffeitems,
       navbox,
-      Navbutton,
+      navbutton,
       Cart
        
     },
@@ -70,7 +70,7 @@ export default {
 <style scoped>
 
 .title{
-  font-family: PT Serif;
+  font-family: 'PT Serif', serif;
   font-size: 42px;
   margin-top: 20px;
 }
@@ -87,6 +87,7 @@ export default {
   position: relative;
 
 }
+
 .footer-img {
   margin-top: auto;
 }
