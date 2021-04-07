@@ -23,12 +23,12 @@
 </template>
 
 <script>
-import Navbutton from "../components/Navbutton";
+import navbutton from "../components/navbutton";
 import navbox from "../components/Nav";
 
 export default {
   components: {
-    Navbutton,
+    navbutton,
     navbox,
   },
   name: "About",
