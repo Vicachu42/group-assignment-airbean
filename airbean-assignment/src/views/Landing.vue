@@ -12,7 +12,7 @@ export default {
     created(){
       setTimeout(() => {
         this.$router.push("/menu");
-      }, 55000);
+      }, 5000);
     },
 }
 </script>

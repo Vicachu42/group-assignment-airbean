@@ -23,9 +23,9 @@
 
 <script>
 
-import  coffeitems from "../components/MenuItem";
+import coffeitems from "../components/MenuItem";
 import navbox from "../components/Nav";
-import navbutton from "../components/navbutton";
+import Navbutton from "../components/Navbutton";
 import Cart from "../components/Cart"
 
 export default {
@@ -34,7 +34,7 @@ export default {
     components:{
       coffeitems,
       navbox,
-      navbutton,
+      Navbutton,
       Cart
        
     },
