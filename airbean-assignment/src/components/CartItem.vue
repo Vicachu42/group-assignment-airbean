@@ -2,6 +2,7 @@
   <article class="holder"> 
            <article class="top"> 
               <h2 class="sub-title">{{title}}</h2> 
+              <div class="line"></div>
                     <aside> 
                     <img v-on:click="addOrder" src="../assets/graphics/arrow-up.svg" alt="">
                     <small> {{count}} </small>
@@ -56,26 +57,34 @@ body {
     align-items: center;
     justify-content: center;
 }
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Work+Sans&display=swap");
 
 .wrap{
     padding: 5px;
+    
 }
 
 .sub-title{
-    font-size: 23px;
+    font-size: 20px;
     margin:0;
+    color:#2F2926;
+    position: absolute;
 
 }
 p {
     margin:0;
+    font-size: 12px;
+    font-family: 'Work Sans', sans-serif;
 }
 .holder {
     display: flex;
     flex-direction: column;
+    
 }
 .top {
     display: flex;
     justify-content: space-between;
+    
 }
 
 aside{
@@ -90,6 +99,17 @@ aside{
     margin-top: 2px;
     display: flex;
     justify-content: start;
+}
+.line {
+    width: 151px;
+    border: 1px dashed rgba(0, 0, 0, 0.4);
+    height: 0;
+    margin-top: 20px;
+    margin-left: 130px;
+}
+aside {
+    margin-top:5px;
+   
 }
 
 

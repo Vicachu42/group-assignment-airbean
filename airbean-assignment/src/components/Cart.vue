@@ -10,9 +10,17 @@
     />
     </div>
     
-
-    <h1>your total: {{ total }}</h1>
-    <p> inkl moms + drönarleverans </p>
+    <article class="bottom-holder">
+      <article class="top">
+      <h1 class="total-title">Total</h1>
+      <div class="line"></div>
+        <h1 class="total-counter"> {{ total }} Kr</h1>
+      </article>
+  
+    <article class="bottom">
+    <p class="detail"> inkl moms + drönarleverans </p>
+    </article>
+    </article>
     <div v-on:click="postOrder" class="btn">
       <p class="btn-text" > Take my money!</p>
    </div>
@@ -52,7 +60,8 @@ export default {
 </script>
 
 <style scoped>
-
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Work+Sans&display=swap");
 .cartHolder {
   position: absolute;
   left: 4.53%;
@@ -60,28 +69,33 @@ export default {
   top: 11.03%;
   bottom: 2.6%;
 
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #ffffff;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
-
- 
-
+  height: 565.77px;
+  width: 341px;
+   font-family: 'PT Serif', serif;
+   
 }
 
 .cart-item {
   width: 90%;
-
+  height: 325px;
 }
-
+.detail {
+    font-size: 12px;
+    font-family: 'Work Sans', sans-serif;
+}
 .cartTitle{
   font-family: PT Serif;
 font-style: normal;
 font-weight: bold;
 font-size: 32px;
-color: #2F2926
+color: #2F2926;
+margin:15px;
 }
 
 .btn {
@@ -92,6 +106,7 @@ display: flex;
 justify-content: center;
 background: #2F2926;
 border-radius: 50px;
+margin-top: 45px;
 
 }
 
@@ -107,5 +122,38 @@ color: #fff;
 .btn:hover{
   cursor: pointer;
 }
+.line {
+  width: 166px;
+    border: 1px dashed rgba(0, 0, 0, 0.4);
+    height: 0;
+    margin-top: 22px;
+    margin-right: 70px;
+}
+.bottom-holder {
+  display: flex;
+  flex-direction: column;
+   color:#2F2926;
+  width: 90%;
+}
+.total-title {
+  font-size: 23px;
+  margin:0;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+.total-counter {
+  position: absolute;
+  margin:0;
+  font-size: 23px;
+  right:12px;
 
+}
 </style>
