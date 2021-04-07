@@ -12,13 +12,13 @@
 </template>
 
 <script>
-import navbutton from "../components/navbutton"; 
+import Navbutton from "../components/Navbutton"; 
 import navbox from "../components/Nav";
 
 export default {
     name: 'Profile',
      components:{
-      navbutton,
+      Navbutton,
       navbox,
     },
 
