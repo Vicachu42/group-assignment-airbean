@@ -1,8 +1,12 @@
 <template>
   <article class="holder"> 
            <article class="top"> 
+               <article class="left">
               <h2 class="sub-title">{{title}}</h2> 
+              </article>
+              <article class="right">
               <div class="line"></div>
+              </article>
                     <aside> 
                     <img v-on:click="addOrder" src="../assets/graphics/arrow-up.svg" alt="">
                     <small> {{count}} </small>
@@ -68,8 +72,16 @@ body {
     font-size: 20px;
     margin:0;
     color:#2F2926;
-    position: absolute;
+ 
+   white-space: nowrap;
+  
 
+}
+.left {
+    width:fit-content;
+}
+.right {
+   width: 90%;
 }
 p {
     margin:0;
@@ -101,11 +113,13 @@ aside{
     justify-content: start;
 }
 .line {
-    width: 151px;
+     display: flex;
+     width: 90%;
     border: 1px dashed rgba(0, 0, 0, 0.4);
     height: 0;
     margin-top: 20px;
-    margin-left: 130px;
+    margin-left: 5px;
+  
 }
 aside {
     margin-top:5px;
