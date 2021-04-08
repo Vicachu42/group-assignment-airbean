@@ -73,6 +73,7 @@ export default {
   font-family: 'PT Serif', serif;
   font-size: 42px;
   margin-top: 20px;
+  color: #2F2926;
 }
 
 .wrapper {
