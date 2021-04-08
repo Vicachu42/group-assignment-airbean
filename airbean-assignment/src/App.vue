@@ -16,6 +16,9 @@ export default {
 <style>
 body{
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

@@ -12,8 +12,9 @@
     
     <article class="bottom-holder">
       <article class="top">
+        <article class="box">
       <h1 class="total-title">Total</h1>
-      <div class="line"></div>
+      </article>
         <h1 class="total-counter"> {{ total }} Kr</h1>
       </article>
   
@@ -49,7 +50,7 @@ export default {
   methods:{
     postOrder: function(){
       if( this.$store.state.cart.length === 0){
-        alert("make an order")
+        alert("You need to select items in order to proceed")
       } else {
          this.$router.push("/status");
       this.$store.dispatch('postOrder');
@@ -80,7 +81,9 @@ export default {
    font-family: 'PT Serif', serif;
    
 }
-
+.box {
+  width: 230px;
+}
 .cart-item {
   width: 90%;
   height: 325px;
@@ -88,6 +91,7 @@ export default {
 .detail {
     font-size: 12px;
     font-family: 'Work Sans', sans-serif;
+    margin:0;
 }
 .cartTitle{
   font-family: PT Serif;
@@ -106,7 +110,8 @@ display: flex;
 justify-content: center;
 background: #2F2926;
 border-radius: 50px;
-margin-top: 45px;
+margin-top: 25px;
+align-items: center;
 
 }
 
@@ -115,7 +120,7 @@ font-family: 'PT Serif', serif;
 font-style: normal;
 font-weight: bold;
 font-size: 24px;
-line-height: 55px;
+
 color: #fff;
 }
 
@@ -138,6 +143,14 @@ color: #fff;
 .total-title {
   font-size: 23px;
   margin:0;
+  display: flex;
+}
+.total-title:after {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.4);
+    content: '';
+    flex: 1;
+    margin-bottom: 7px;
+    margin-left:5px;
 }
 .top {
   display: flex;
