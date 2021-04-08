@@ -5,7 +5,7 @@
          <article class="button" v-on:click="send"> <img src="../assets/graphics/add.svg" alt=""> </article> 
            <article class="top"> 
               <h2 class="sub-title">{{title}}</h2> 
-              <p>{{price}} Kr</p>
+              <p class="price">{{price}} Kr</p>
          </article> 
               
          <article class="bottom"> <p>{{description}}</p> </article>
@@ -44,6 +44,7 @@ methods:{
 </script>
 
 <style>
+
 body {
 
     display:flex;
@@ -56,29 +57,43 @@ body {
 }
 
 .sub-title{
+    font-family: PT Serif;
     font-size: 23px;
     margin:0;
-
 }
+
 p {
+    font-family: PT Work Sans;
     margin:0;
 }
+
 .holder {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    
 }
+
+.price {
+    font-family: PT Serif;
+    
+}
+
 .top {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
+
 .top p {
     margin-left:75px;
     font-size: 23px;
 }
+
 .bottom {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
+
 .button {
     width:32px;
     height: 32px;
@@ -86,12 +101,14 @@ p {
     border-radius: 100%;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 }
+
 .button img {
     height: 11.19px;
     widows: 11.19px;
 }
+
 .button:hover {
      cursor: pointer;
 }
