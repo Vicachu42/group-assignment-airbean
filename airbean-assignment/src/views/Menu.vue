@@ -57,6 +57,8 @@ export default {
     methods:{
       toggle(){
          this.$store.commit("toggle");
+            this.$store.commit("showCart");
+            this.$store.commit("resetCart");
       },
       toggleCart(){
          this.$store.commit("showCart");
