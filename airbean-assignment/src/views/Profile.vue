@@ -45,7 +45,7 @@
         <div class="total-divider"></div>
         <section class="total-sum">
           <p>Totalt spenderat</p>
-          <p>1669 kr kr</p>
+          <p>1669 kr</p>
         </section>
       </article>
     </div>
@@ -212,8 +212,12 @@ color: #fff;
   width: 100%;
   justify-content: space-between;
   height: 19px;
- 
+ font-family: "Work Sans", sans-serif;
 color: rgba(255, 255, 255, 0.8);;
 
+}
+.total-sum p {
+  font-weight: 700;
+  font-size:14px;
 }
 </style>

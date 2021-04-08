@@ -2,10 +2,12 @@
   <article class="holder"> 
            <article class="top"> 
                <article class="left">
+                   <article class="box">
               <h2 class="sub-title">{{title}}</h2> 
               </article>
+              </article>
               <article class="right">
-              <div class="line"></div>
+             
               </article>
                     <aside> 
                     <img v-on:click="addOrder" src="../assets/graphics/arrow-up.svg" alt="">
@@ -72,10 +74,19 @@ body {
     font-size: 20px;
     margin:0;
     color:#2F2926;
- 
    white-space: nowrap;
+   display: flex;
   
 
+}
+.box {
+    width:275px;
+}
+.sub-title:after {
+     border-bottom: 1px dashed rgba(0, 0, 0, 0.4);
+    content: '';
+    flex: 1;
+    margin-bottom: 4px;
 }
 .left {
     width:fit-content;
@@ -91,19 +102,20 @@ p {
 .holder {
     display: flex;
     flex-direction: column;
+    margin-bottom: 5px;
     
 }
 .top {
     display: flex;
     justify-content: space-between;
-    
+    margin-bottom: -5px;
 }
 
 aside{
     height: 2rem;
     justify-content: space-between;
     display: flex;
-
+    margin-top:5px;
     flex-direction: column;
 }
 
@@ -112,19 +124,10 @@ aside{
     display: flex;
     justify-content: start;
 }
-.line {
-     display: flex;
-     width: 90%;
-    border: 1px dashed rgba(0, 0, 0, 0.4);
-    height: 0;
-    margin-top: 20px;
-    margin-left: 5px;
-  
-}
-aside {
-    margin-top:5px;
-   
-}
 
 
+
+small {
+font-weight: 600;
+}
 </style>
