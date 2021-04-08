@@ -72,14 +72,16 @@ body {
     font-size: 20px;
     margin:0;
     color:#2F2926;
+ 
+   white-space: nowrap;
   
 
 }
 .left {
-    width: fit-content;
+    width:fit-content;
 }
 .right {
-    width: 50%;
+   width: 90%;
 }
 p {
     margin:0;
@@ -112,10 +114,11 @@ aside{
 }
 .line {
      display: flex;
-     width: 10px;
+     width: 90%;
     border: 1px dashed rgba(0, 0, 0, 0.4);
     height: 0;
     margin-top: 20px;
+    margin-left: 5px;
   
 }
 aside {
